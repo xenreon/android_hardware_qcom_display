@@ -1,3 +1,5 @@
+ifeq ($(TARGET_QCOM_DISPLAY_VARIANT),caf-sm8150)
+
 ifneq ($(TARGET_DISABLE_DISPLAY),true)
 sdm-libs := sdm/libs
 display-hals := include $(sdm-libs)/utils $(sdm-libs)/core libdebug
@@ -17,3 +19,4 @@ ifneq ($(filter msm% apq%,$(TARGET_BOARD_PLATFORM)),)
 endif
 endif
 endif #TARGET_DISABLE_DISPLAY
+endif
